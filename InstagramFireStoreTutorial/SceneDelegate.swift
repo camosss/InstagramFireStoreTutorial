@@ -17,8 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // tap bar
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-//        window?.rootViewController = MainTabController()
-        window?.rootViewController = UINavigationController(rootViewController: LoginController())
+       // 앱을 킴과 동시에 메인화면 나옴
+        window?.rootViewController = MainTabController()
+        // 앱을 킴과 동시에 로그인화면 나옴
+//        window?.rootViewController = UINavigationController(rootViewController: LoginController())
         window?.makeKeyAndVisible()
     }
 
