@@ -10,6 +10,7 @@
 		B4173D5C263061ED00361969 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D5B263061ED00361969 /* UserService.swift */; };
 		B4173D5F2630626A00361969 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D5E2630626A00361969 /* Constants.swift */; };
 		B4173D622630659A00361969 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D612630659A00361969 /* User.swift */; };
+		B4173D652630759C00361969 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D642630759C00361969 /* ProfileHeaderViewModel.swift */; };
 		B42C3557262FD24D008E8959 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C3556262FD24D008E8959 /* ProfileCell.swift */; };
 		B42C355A262FD259008E8959 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C3559262FD259008E8959 /* ProfileHeader.swift */; };
 		B42D47A6262EB089003DBB57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D47A5262EB089003DBB57 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 		B4173D5B263061ED00361969 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B4173D5E2630626A00361969 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4173D612630659A00361969 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B4173D642630759C00361969 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		B42C3556262FD24D008E8959 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		B42C3559262FD259008E8959 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		B42D47A2262EB089003DBB57 /* InstagramFireStoreTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFireStoreTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				B42D47C8262EB1AE003DBB57 /* AuthenticationViewModel.swift */,
+				B4173D642630759C00361969 /* ProfileHeaderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				B42D47E1262EB214003DBB57 /* ProfileController.swift in Sources */,
 				B4173D622630659A00361969 /* User.swift in Sources */,
 				B42D47C6262EB188003DBB57 /* CustomTextField.swift in Sources */,
+				B4173D652630759C00361969 /* ProfileHeaderViewModel.swift in Sources */,
 				B4173D5F2630626A00361969 /* Constants.swift in Sources */,
 				B42D47D5262EB1E9003DBB57 /* FeedController.swift in Sources */,
 				B42D47DE262EB20D003DBB57 /* NotificationController.swift in Sources */,
