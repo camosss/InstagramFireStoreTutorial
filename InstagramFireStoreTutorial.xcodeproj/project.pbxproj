@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4173D5C263061ED00361969 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D5B263061ED00361969 /* UserService.swift */; };
+		B4173D5F2630626A00361969 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D5E2630626A00361969 /* Constants.swift */; };
+		B4173D622630659A00361969 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D612630659A00361969 /* User.swift */; };
 		B42C3557262FD24D008E8959 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C3556262FD24D008E8959 /* ProfileCell.swift */; };
 		B42C355A262FD259008E8959 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C3559262FD259008E8959 /* ProfileHeader.swift */; };
 		B42D47A6262EB089003DBB57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D47A5262EB089003DBB57 /* AppDelegate.swift */; };
@@ -35,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		0358A1B480BBAF30C25D0A92 /* Pods-InstagramFireStoreTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFireStoreTutorial.release.xcconfig"; path = "Target Support Files/Pods-InstagramFireStoreTutorial/Pods-InstagramFireStoreTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		B4173D5B263061ED00361969 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		B4173D5E2630626A00361969 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B4173D612630659A00361969 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B42C3556262FD24D008E8959 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		B42C3559262FD259008E8959 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		B42D47A2262EB089003DBB57 /* InstagramFireStoreTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFireStoreTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +141,7 @@
 		B42D47BB262EB0F1003DBB57 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4173D612630659A00361969 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 			children = (
 				B42D480A262EBA48003DBB57 /* ImageUploader.swift */,
 				B42D480E262EBA5D003DBB57 /* AuthService.swift */,
+				B4173D5B263061ED00361969 /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				B42D47E3262EB21F003DBB57 /* Extentions.swift */,
+				B4173D5E2630626A00361969 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -331,12 +340,15 @@
 				B42D47A6262EB089003DBB57 /* AppDelegate.swift in Sources */,
 				B42D47A8262EB089003DBB57 /* SceneDelegate.swift in Sources */,
 				B42D47E1262EB214003DBB57 /* ProfileController.swift in Sources */,
+				B4173D622630659A00361969 /* User.swift in Sources */,
 				B42D47C6262EB188003DBB57 /* CustomTextField.swift in Sources */,
+				B4173D5F2630626A00361969 /* Constants.swift in Sources */,
 				B42D47D5262EB1E9003DBB57 /* FeedController.swift in Sources */,
 				B42D47DE262EB20D003DBB57 /* NotificationController.swift in Sources */,
 				B42D47D8262EB1F5003DBB57 /* SearchController.swift in Sources */,
 				B42D480B262EBA48003DBB57 /* ImageUploader.swift in Sources */,
 				B42D480F262EBA5D003DBB57 /* AuthService.swift in Sources */,
+				B4173D5C263061ED00361969 /* UserService.swift in Sources */,
 				B42C3557262FD24D008E8959 /* ProfileCell.swift in Sources */,
 				B42D47CF262EB1CA003DBB57 /* RegistrationController.swift in Sources */,
 				B42D47CC262EB1BF003DBB57 /* LoginController.swift in Sources */,
