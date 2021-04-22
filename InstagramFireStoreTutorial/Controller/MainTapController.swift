@@ -12,19 +12,32 @@ class MainTabController: UITabBarController {
     
     // MARK: - Lifecycle
     
+    private var user: User? {
+        didSet {
+            guard let user = user else { return }
+            configureViewController(withUser: user)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureViewController()
         checkIfUserIsLoggedIn()
+        fetchUser()
     }
     
     // MARK: - API
+    
+    func fetchUser() {
+        UserService.fetchUser { user in
+            self.user = user
+        }
+    }
     
     func checkIfUserIsLoggedIn() {
         if Auth.auth().currentUser == nil {
             DispatchQueue.main.async {
                 let controller = LoginController()
+                controller.delegate = self
                 let nav = UINavigationController(rootViewController: controller)
                 nav.modalPresentationStyle = .fullScreen
                 self.present(nav, animated: true, completion: nil)
@@ -35,7 +48,7 @@ class MainTabController: UITabBarController {
     
     // MARK: - Helpers
     
-    func configureViewController() {
+    func configureViewController(withUser user: User) {
         view.backgroundColor = .white
         
         let layout = UICollectionViewFlowLayout()
@@ -47,8 +60,8 @@ class MainTabController: UITabBarController {
         
         let notification = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "like_unselected"), selectedImage: #imageLiteral(resourceName: "like_selected"), rootViewController: NotificationController())
         
-        let profileLayout = UICollectionViewFlowLayout()
-        let profile = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: ProfileController(collectionViewLayout: profileLayout))
+        let profileController = ProfileController(user: user)
+        let profile = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: profileController)
         
         viewControllers = [feed, search, imageSelector, notification, profile]
         
@@ -65,3 +78,11 @@ class MainTabController: UITabBarController {
     }
 }
 
+    // MARK: - AuthenticationDelegate
+
+extension MainTabController: AuthenticationDelegate {
+    func authenticationComplete() {
+        fetchUser()
+        self.dismiss(animated: true, completion: nil)
+    }
+}
