@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B412CA4F263149A60000C1C5 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412CA4E263149A60000C1C5 /* UserCell.swift */; };
+		B412CA52263161130000C1C5 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412CA51263161130000C1C5 /* UserCellViewModel.swift */; };
 		B4173D5C263061ED00361969 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D5B263061ED00361969 /* UserService.swift */; };
 		B4173D5F2630626A00361969 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D5E2630626A00361969 /* Constants.swift */; };
 		B4173D622630659A00361969 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D612630659A00361969 /* User.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		0358A1B480BBAF30C25D0A92 /* Pods-InstagramFireStoreTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFireStoreTutorial.release.xcconfig"; path = "Target Support Files/Pods-InstagramFireStoreTutorial/Pods-InstagramFireStoreTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		B412CA4E263149A60000C1C5 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		B412CA51263161130000C1C5 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		B4173D5B263061ED00361969 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B4173D5E2630626A00361969 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4173D612630659A00361969 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				B42D47C8262EB1AE003DBB57 /* AuthenticationViewModel.swift */,
 				B4173D642630759C00361969 /* ProfileHeaderViewModel.swift */,
+				B412CA51263161130000C1C5 /* UserCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				B4173D652630759C00361969 /* ProfileHeaderViewModel.swift in Sources */,
 				B4173D5F2630626A00361969 /* Constants.swift in Sources */,
 				B42D47D5262EB1E9003DBB57 /* FeedController.swift in Sources */,
+				B412CA52263161130000C1C5 /* UserCellViewModel.swift in Sources */,
 				B42D47DE262EB20D003DBB57 /* NotificationController.swift in Sources */,
 				B42D47D8262EB1F5003DBB57 /* SearchController.swift in Sources */,
 				B42D480B262EBA48003DBB57 /* ImageUploader.swift in Sources */,

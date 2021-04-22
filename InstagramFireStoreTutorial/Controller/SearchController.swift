@@ -15,12 +15,19 @@ class SearchController: UITableViewController {
     
     // user을 포함할 빈 배열
     private var users = [User]()
+    // 찾는 계정의 일부만 검색해도 찾을 수 있게
+    private var filteredUsers = [User]()
+    private let searchController = UISearchController(searchResultsController: nil)
+    // 사용자가 무엇을 검색하고 있는지 여부를 결정 && 텍스트가 비어있는지 확인
+    private var inSearchMode: Bool {
+        return searchController.isActive && !searchController.searchBar.text!.isEmpty
+    }
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureSearchController()
         configureTableVIew()
         fetchUsers()
     }
@@ -44,19 +51,60 @@ class SearchController: UITableViewController {
         tableView.rowHeight = 64
     }
     
+    func configureSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = false
+    }
+    
 }
 
     // MARK: - UITableViewDataSource
 
 extension SearchController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
-        
+        return inSearchMode ? filteredUsers.count : users.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! UserCell
-        cell.user = users[indexPath.row]
+        
+        let user = inSearchMode ? filteredUsers[indexPath.row] : users[indexPath.row]
+        cell.viewModel = UserCellViewModel(user: user)
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+// 실제 사용자 프로필로 이동하는 방법
+extension SearchController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // print("DEBUG: User is \(users[indexPath.row].username)")
+        let user = inSearchMode ? filteredUsers[indexPath.row] : users[indexPath.row]
+        let controller = ProfileController(user: user)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+    // MARK: - UISearchResultsUpdating
+// 검색결과 업데이트
+
+extension SearchController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        // Search Bar에 입력할 때
+        guard let searchText = searchController.searchBar.text?.lowercased() else { return }
+            //print("DEBUG: Search text \(searchText)")
+        filteredUsers = users.filter({
+            $0.username.contains(searchText) ||
+                $0.fullname.lowercased().contains(searchText)
+        })
+        
+        // 찾는 계정의 일부만 검색해도 data가 출력됨
+        //print("DEBUG: filtered users \(filteredUsers)")
+        self.tableView.reloadData()
     }
 }

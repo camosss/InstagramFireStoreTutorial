@@ -13,12 +13,18 @@ class UserCell: UITableViewCell {
     
     // MARK: - Properties
     
-    // 아래의 user object 대신 view model을 사용할 것
+    // 아래의 user object 대신 view model(UserCellViewModel.swift)을 사용할 것
+   /*
     var user: User? {
         didSet {
             usernameLabel.text = user?.username
             fullnameLabel.text = user?.fullname
         }
+    }
+    */
+    
+    var viewModel: UserCellViewModel? {
+        didSet { configure() }
     }
     
     private  let profileImageView: UIImageView = {
@@ -69,5 +75,15 @@ class UserCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Helper
+    
+    func configure() {
+        guard let viewModel = viewModel else { return }
+        
+        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        usernameLabel.text = viewModel.username
+        fullnameLabel.text = viewModel.fullname
     }
 }
