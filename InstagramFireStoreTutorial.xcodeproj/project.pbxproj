@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B412CA4F263149A60000C1C5 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412CA4E263149A60000C1C5 /* UserCell.swift */; };
 		B4173D5C263061ED00361969 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D5B263061ED00361969 /* UserService.swift */; };
 		B4173D5F2630626A00361969 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D5E2630626A00361969 /* Constants.swift */; };
 		B4173D622630659A00361969 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D612630659A00361969 /* User.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		0358A1B480BBAF30C25D0A92 /* Pods-InstagramFireStoreTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFireStoreTutorial.release.xcconfig"; path = "Target Support Files/Pods-InstagramFireStoreTutorial/Pods-InstagramFireStoreTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		B412CA4E263149A60000C1C5 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B4173D5B263061ED00361969 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B4173D5E2630626A00361969 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4173D612630659A00361969 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				B42C355C262FD261008E8959 /* Profile */,
 				B42D47C2262EB17A003DBB57 /* FeedCell.swift */,
 				B42D47C5262EB188003DBB57 /* CustomTextField.swift */,
+				B412CA4E263149A60000C1C5 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				B42D47C3262EB17A003DBB57 /* FeedCell.swift in Sources */,
 				B42D47DB262EB201003DBB57 /* ImageSelectorController.swift in Sources */,
 				B42D47A6262EB089003DBB57 /* AppDelegate.swift in Sources */,
+				B412CA4F263149A60000C1C5 /* UserCell.swift in Sources */,
 				B42D47A8262EB089003DBB57 /* SceneDelegate.swift in Sources */,
 				B42D47E1262EB214003DBB57 /* ProfileController.swift in Sources */,
 				B4173D622630659A00361969 /* User.swift in Sources */,
