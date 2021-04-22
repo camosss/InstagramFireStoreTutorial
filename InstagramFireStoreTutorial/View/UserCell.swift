@@ -5,11 +5,21 @@
 //  Created by 강호성 on 2021/04/22.
 //
 
+// Search Tap의 cell
+
 import UIKit
 
 class UserCell: UITableViewCell {
     
     // MARK: - Properties
+    
+    // 아래의 user object 대신 view model을 사용할 것
+    var user: User? {
+        didSet {
+            usernameLabel.text = user?.username
+            fullnameLabel.text = user?.fullname
+        }
+    }
     
     private  let profileImageView: UIImageView = {
         let iv = UIImageView()
