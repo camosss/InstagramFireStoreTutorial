@@ -38,7 +38,7 @@ class ProfileHeader: UICollectionReusableView {
     
     private lazy var editProfileFollowButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Edit Profile", for: .normal)
+        button.setTitle("Loding", for: .normal)
         button.layer.cornerRadius = 3
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.layer.borderWidth = 0.5
@@ -173,19 +173,3 @@ class ProfileHeader: UICollectionReusableView {
     }
 }
 
-    // MARK: - ProfileHeaderDelegate
-
-extension ProfileController: ProfileHeaderDelegate {
-    func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
-        
-        if user.isCurrentUser {
-            print("DEBUG: Show edit profile here...")
-        } else if user.isFollowed {
-            print("DEBUG: Handle unfollow user here...")
-        } else {
-            UserService.follow(uid: user.uid) { error in
-                print("DEBUG: Did follw user. Update UI now...")
-            }
-        }
-    }
-}

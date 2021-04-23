@@ -101,3 +101,26 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: view.frame.width, height: 240)
     }
 }
+
+// MARK: - ProfileHeaderDelegate
+
+extension ProfileController: ProfileHeaderDelegate {
+func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
+    
+    if user.isCurrentUser {
+        print("DEBUG: Show edit profile here...")
+    } else if user.isFollowed {
+        // print("DEBUG: Handle unfollow user here...")
+        UserService.unfollow(uid: user.uid) { error in
+            self.user.isFollowed = false
+            self.collectionView.reloadData()
+        }
+    } else {
+        UserService.follow(uid: user.uid) { error in
+           // print("DEBUG: Did follw user. Update UI now...")
+            self.user.isFollowed = true
+            self.collectionView.reloadData()
+        }
+    }
+}
+}
