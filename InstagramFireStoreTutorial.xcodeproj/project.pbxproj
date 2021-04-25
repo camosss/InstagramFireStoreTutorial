@@ -36,6 +36,8 @@
 		B42D47E7262EB6D4003DBB57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B42D47E6262EB6D4003DBB57 /* GoogleService-Info.plist */; };
 		B42D480B262EBA48003DBB57 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D480A262EBA48003DBB57 /* ImageUploader.swift */; };
 		B42D480F262EBA5D003DBB57 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D480E262EBA5D003DBB57 /* AuthService.swift */; };
+		B42D71F226352F1200900128 /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D71F126352F1200900128 /* UploadPostController.swift */; };
+		B42D71F526353B4A00900128 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D71F426353B4A00900128 /* InputTextView.swift */; };
 		D26707BE18CF86E0269BE5D0 /* Pods_InstagramFireStoreTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3C3AACD959508A9754A59B /* Pods_InstagramFireStoreTutorial.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		B42D47E6262EB6D4003DBB57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B42D480A262EBA48003DBB57 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		B42D480E262EBA5D003DBB57 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		B42D71F126352F1200900128 /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
+		B42D71F426353B4A00900128 /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		CA3C3AACD959508A9754A59B /* Pods_InstagramFireStoreTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFireStoreTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BCB62BC8D513B9E794819C /* Pods-InstagramFireStoreTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFireStoreTutorial.debug.xcconfig"; path = "Target Support Files/Pods-InstagramFireStoreTutorial/Pods-InstagramFireStoreTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +187,7 @@
 				B42D47DA262EB201003DBB57 /* ImageSelectorController.swift */,
 				B42D47DD262EB20D003DBB57 /* NotificationController.swift */,
 				B42D47E0262EB214003DBB57 /* ProfileController.swift */,
+				B42D71F126352F1200900128 /* UploadPostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 			children = (
 				B42D47E3262EB21F003DBB57 /* Extentions.swift */,
 				B4173D5E2630626A00361969 /* Constants.swift */,
+				B42D71F426353B4A00900128 /* InputTextView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			files = (
 				B42D47C9262EB1AE003DBB57 /* AuthenticationViewModel.swift in Sources */,
 				B42C355A262FD259008E8959 /* ProfileHeader.swift in Sources */,
+				B42D71F226352F1200900128 /* UploadPostController.swift in Sources */,
 				B42D47D2262EB1DE003DBB57 /* MainTapController.swift in Sources */,
 				B42D47E4262EB21F003DBB57 /* Extentions.swift in Sources */,
 				B42D47AA262EB089003DBB57 /* ViewController.swift in Sources */,
@@ -353,6 +360,7 @@
 				B4173D622630659A00361969 /* User.swift in Sources */,
 				B42D47C6262EB188003DBB57 /* CustomTextField.swift in Sources */,
 				B4173D652630759C00361969 /* ProfileHeaderViewModel.swift in Sources */,
+				B42D71F526353B4A00900128 /* InputTextView.swift in Sources */,
 				B4173D5F2630626A00361969 /* Constants.swift in Sources */,
 				B42D47D5262EB1E9003DBB57 /* FeedController.swift in Sources */,
 				B412CA52263161130000C1C5 /* UserCellViewModel.swift in Sources */,
