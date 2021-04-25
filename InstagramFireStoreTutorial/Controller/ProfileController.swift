@@ -48,7 +48,7 @@ class ProfileController: UICollectionViewController {
             self.user.stats = stats
             self.collectionView.reloadData()
             
-            print("DEBUG: Stats \(stats)")
+           // print("DEBUG: Stats \(stats)")
         }
     }
     
