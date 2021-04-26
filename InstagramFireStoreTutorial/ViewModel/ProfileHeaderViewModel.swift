@@ -10,13 +10,9 @@ import UIKit
 struct ProfileHeaderViewModel {
     let user: User
     
-    var fullname: String {
-        return user.fullname
-    }
+    var fullname: String { return user.fullname }
     
-    var profileImageUrl: URL? {
-        return URL(string: user.profileImageUrl)
-    }
+    var profileImageUrl: URL? { return URL(string: user.profileImageUrl) }
     
     var followButtonText: String {
         if user.isCurrentUser {
