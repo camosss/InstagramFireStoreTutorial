@@ -52,6 +52,9 @@ class CommentController: UICollectionViewController {
         
         collectionView.backgroundColor = .white
         collectionView.register(CommentCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        // drag할 때 키보드 창이 내려가도록
+        collectionView.alwaysBounceVertical = true
+        collectionView.keyboardDismissMode = .interactive
     }
 }
     // MARK: - UICollectionViewDataSource

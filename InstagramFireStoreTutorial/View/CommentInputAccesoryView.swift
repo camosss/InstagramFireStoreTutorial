@@ -36,6 +36,8 @@ class CommentInputAccesoryView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        // comment줄과 inputAccesoryView가 겹치지 않게
+        backgroundColor = .white
         // 키보드를 열고 내리면서의 높이 변화
         // 장치의 화면에 따라 유연하게 변형
         autoresizingMask = .flexibleHeight
