@@ -27,7 +27,7 @@ class FeedController: UICollectionViewController {
     // MARK: - Actions
     
     @objc func handleRefresh() {
-        posts.removeAll()
+//        posts.removeAll()
         fetchPosts()
     }
     
@@ -90,6 +90,7 @@ extension FeedController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FeedCell
+        cell.delegate = self  // delegate와 protocol을 적용시키기 위함
         
         if let post = post {
             cell.viewModel = PostViewModel(post: post)
@@ -112,5 +113,14 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
         height += 60
         
         return CGSize(width: width, height: height)
+    }
+}
+
+    // MARK: - FeedCellDelegate
+// FeedCellDelegate의 cell을 위임
+extension FeedController: FeedCellDelegate {
+    func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post) {
+        let controller = CommentController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
