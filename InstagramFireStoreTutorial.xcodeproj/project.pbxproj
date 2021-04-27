@@ -11,6 +11,7 @@
 		B412CA52263161130000C1C5 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412CA51263161130000C1C5 /* UserCellViewModel.swift */; };
 		B416EA34263841B600B43D6C /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416EA33263841B600B43D6C /* CommentController.swift */; };
 		B416EA372638436F00B43D6C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416EA362638436F00B43D6C /* CommentCell.swift */; };
+		B416EA3A2638534800B43D6C /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416EA392638534800B43D6C /* CommentInputAccesoryView.swift */; };
 		B4173D5C263061ED00361969 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D5B263061ED00361969 /* UserService.swift */; };
 		B4173D5F2630626A00361969 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D5E2630626A00361969 /* Constants.swift */; };
 		B4173D622630659A00361969 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D612630659A00361969 /* User.swift */; };
@@ -52,6 +53,7 @@
 		B412CA51263161130000C1C5 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		B416EA33263841B600B43D6C /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		B416EA362638436F00B43D6C /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		B416EA392638534800B43D6C /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
 		B4173D5B263061ED00361969 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B4173D5E2630626A00361969 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4173D612630659A00361969 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				B42D47C5262EB188003DBB57 /* CustomTextField.swift */,
 				B412CA4E263149A60000C1C5 /* UserCell.swift */,
 				B416EA362638436F00B43D6C /* CommentCell.swift */,
+				B416EA392638534800B43D6C /* CommentInputAccesoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				B42D480B262EBA48003DBB57 /* ImageUploader.swift in Sources */,
 				B4DDF7AC26368121000C49D2 /* Post.swift in Sources */,
 				B42D480F262EBA5D003DBB57 /* AuthService.swift in Sources */,
+				B416EA3A2638534800B43D6C /* CommentInputAccesoryView.swift in Sources */,
 				B4DDF7A926366E90000C49D2 /* PostService.swift in Sources */,
 				B4173D5C263061ED00361969 /* UserService.swift in Sources */,
 				B42C3557262FD24D008E8959 /* ProfileCell.swift in Sources */,
