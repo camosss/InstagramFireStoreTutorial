@@ -125,12 +125,16 @@ extension FeedController: FeedCellDelegate {
     }
     
     func cell(_ cell: FeedCell, didLike post: Post) {
-        cell.viewModel?.post.didLike.toggle()
+        cell.viewModel?.post.didLike.toggle()  // toggle - Bool 값을 반전
         
         if post.didLike {
             print("DEBUG: Unlike post here..")
         } else {
-            print("DEBUG: Like post here..")
+//            print("DEBUG: Like post here..")
+            PostService.likePost(post: post) { error in
+                cell.likeButton.setImage(#imageLiteral(resourceName: "like_selected"), for: .normal)
+                cell.likeButton.tintColor = .red
+            }
         }
     }
 }
