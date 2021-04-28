@@ -14,7 +14,9 @@ class FeedController: UICollectionViewController {
     
     // MARK: - Lifecycle
     
-    private var posts = [Post]()
+    private var posts = [Post]() {
+        didSet { collectionView.reloadData() }
+    }
     
     var post: Post?
     
@@ -52,12 +54,22 @@ class FeedController: UICollectionViewController {
         
         PostService.fetchPosts { posts in
             self.posts = posts
+            self.checkIfUserLikePosts()
             self.collectionView.refreshControl?.endRefreshing()
-            self.collectionView.reloadData()
         }
     }
     
-    // MARK: - Helper
+    func checkIfUserLikePosts() {
+        self.posts.forEach { post in
+            PostService.checkIfUserLikedPost(post: post) { didLike in
+                if let index = self.posts.firstIndex(where: { $0.postId == post.postId }) {
+                    self.posts[index].didLike = didLike
+                }
+            }
+        }
+    }
+    
+    // MARK: - Helpers
     
     func configureUI() {
         collectionView.backgroundColor = .white
@@ -130,16 +142,18 @@ extension FeedController: FeedCellDelegate {
         if post.didLike {
 //            print("DEBUG: Unlike post here..")
             PostService.unlikePost(post: post) { _ in
-                print("DEBUG: Unlike post did complete..")
+//                print("DEBUG: Unlike post did complete..")
                 cell.likeButton.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
                 cell.likeButton.tintColor = .black
+                cell.viewModel?.post.likes = post.likes - 1
             }
         } else {
 //            print("DEBUG: Like post here..")
             PostService.likePost(post: post) { _ in
-                print("DEBUG: like post did complete..")
+//                print("DEBUG: like post did complete..")
                 cell.likeButton.setImage(#imageLiteral(resourceName: "like_selected"), for: .normal)
                 cell.likeButton.tintColor = .red
+                cell.viewModel?.post.likes = post.likes + 1
             }
         }
     }
