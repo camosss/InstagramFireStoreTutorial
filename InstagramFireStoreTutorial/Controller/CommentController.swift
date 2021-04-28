@@ -88,8 +88,8 @@ extension CommentController {
     }
         
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CommentCell
+        cell.viewModel = CommentViewModel(comment: comments[indexPath.row])
         return cell
     }
 }
@@ -98,18 +98,17 @@ extension CommentController {
 
 extension CommentController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: view.frame.width, height: 80)
+        let viewModel = CommentViewModel(comment: comments[indexPath.row])
+        let height = viewModel.size(forWidh: view.frame.width).height + 32
+        return CGSize(width: view.frame.width, height: height)
     }
 }
 
     // MARK: - CommentInputAccesoryViewDelegate
 extension CommentController: CommentInputAccesoryViewDelegate {
     func inputView(_ inputView: CommentInputAccesoryView, wantsToUploadComment comment: String) {
-
         //     print("DEBUG: Comment is \(comment)")
-        
-        guard let tab = self.tabBarController as? MainTabController else { return }
+        guard let tab = tabBarController as? MainTabController else { return }
         guard let user = tab.user else { return }
         
         showLoader(true)

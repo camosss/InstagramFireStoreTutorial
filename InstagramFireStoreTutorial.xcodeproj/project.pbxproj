@@ -20,6 +20,7 @@
 		B4173D652630759C00361969 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4173D642630759C00361969 /* ProfileHeaderViewModel.swift */; };
 		B42C3557262FD24D008E8959 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C3556262FD24D008E8959 /* ProfileCell.swift */; };
 		B42C355A262FD259008E8959 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C3559262FD259008E8959 /* ProfileHeader.swift */; };
+		B42C602E2638FE5600C318DF /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42C602D2638FE5600C318DF /* CommentViewModel.swift */; };
 		B42D47A6262EB089003DBB57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D47A5262EB089003DBB57 /* AppDelegate.swift */; };
 		B42D47A8262EB089003DBB57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D47A7262EB089003DBB57 /* SceneDelegate.swift */; };
 		B42D47AA262EB089003DBB57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D47A9262EB089003DBB57 /* ViewController.swift */; };
@@ -64,6 +65,7 @@
 		B4173D642630759C00361969 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		B42C3556262FD24D008E8959 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		B42C3559262FD259008E8959 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		B42C602D2638FE5600C318DF /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		B42D47A2262EB089003DBB57 /* InstagramFireStoreTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFireStoreTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42D47A5262EB089003DBB57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B42D47A7262EB089003DBB57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				B4173D642630759C00361969 /* ProfileHeaderViewModel.swift */,
 				B412CA51263161130000C1C5 /* UserCellViewModel.swift */,
 				B4DDF7AE2636B8D0000C49D2 /* PostViewModel.swift */,
+				B42C602D2638FE5600C318DF /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42C602E2638FE5600C318DF /* CommentViewModel.swift in Sources */,
 				B4DDF7AF2636B8D0000C49D2 /* PostViewModel.swift in Sources */,
 				B42D47C9262EB1AE003DBB57 /* AuthenticationViewModel.swift in Sources */,
 				B42C355A262FD259008E8959 /* ProfileHeader.swift in Sources */,
