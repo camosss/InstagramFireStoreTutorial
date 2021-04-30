@@ -47,6 +47,7 @@
 		B4DDF7A926366E90000C49D2 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DDF7A826366E90000C49D2 /* PostService.swift */; };
 		B4DDF7AC26368121000C49D2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DDF7AB26368121000C49D2 /* Post.swift */; };
 		B4DDF7AF2636B8D0000C49D2 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DDF7AE2636B8D0000C49D2 /* PostViewModel.swift */; };
+		B4F47CD3263BBE4C002AF339 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F47CD2263BBE4C002AF339 /* NotificationCell.swift */; };
 		D26707BE18CF86E0269BE5D0 /* Pods_InstagramFireStoreTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3C3AACD959508A9754A59B /* Pods_InstagramFireStoreTutorial.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		B4DDF7A826366E90000C49D2 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		B4DDF7AB26368121000C49D2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B4DDF7AE2636B8D0000C49D2 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		B4F47CD2263BBE4C002AF339 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		CA3C3AACD959508A9754A59B /* Pods_InstagramFireStoreTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramFireStoreTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BCB62BC8D513B9E794819C /* Pods-InstagramFireStoreTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFireStoreTutorial.debug.xcconfig"; path = "Target Support Files/Pods-InstagramFireStoreTutorial/Pods-InstagramFireStoreTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +187,7 @@
 				B412CA4E263149A60000C1C5 /* UserCell.swift */,
 				B416EA362638436F00B43D6C /* CommentCell.swift */,
 				B416EA392638534800B43D6C /* CommentInputAccesoryView.swift */,
+				B4F47CD2263BBE4C002AF339 /* NotificationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				B4173D5C263061ED00361969 /* UserService.swift in Sources */,
 				B42C3557262FD24D008E8959 /* ProfileCell.swift in Sources */,
 				B42D47CF262EB1CA003DBB57 /* RegistrationController.swift in Sources */,
+				B4F47CD3263BBE4C002AF339 /* NotificationCell.swift in Sources */,
 				B42D47CC262EB1BF003DBB57 /* LoginController.swift in Sources */,
 				B416EA372638436F00B43D6C /* CommentCell.swift in Sources */,
 			);
