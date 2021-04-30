@@ -131,6 +131,13 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
     // MARK: - FeedCellDelegate
 // FeedCellDelegate의 cell을 위임
 extension FeedController: FeedCellDelegate {
+    func cell(_ cell: FeedCell, wantsToShowPrifileFor uid: String) {
+        UserService.fetchUser(withUid: uid) { user in
+            let controller = ProfileController(user: user)
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    
     func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post) {
         let controller = CommentController(post: post)
         navigationController?.pushViewController(controller, animated: true)
