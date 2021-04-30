@@ -82,7 +82,7 @@ struct PostService {
 
         COLLECTION_USERS.document(uid).collection("user-likes").document(post.postId).getDocument { (snapshot, _) in
             guard let didLike = snapshot?.exists else { return }
-            print("(post.caption) : \(didLike)") 
+//            print("(post.caption) : \(didLike)") 
             completion(didLike)
         }
     }
