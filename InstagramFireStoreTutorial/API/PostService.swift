@@ -60,7 +60,8 @@ struct PostService {
         COLLECTION_POSTS.document(post.postId).updateData(["likes": post.likes + 1])
         
         COLLECTION_POSTS.document(post.postId).collection("post-likes").document(uid).setData([:]) { _ in
-            COLLECTION_POSTS.document(uid).collection("user-likes").document(post.postId).setData([:], completion: completion)
+            
+            COLLECTION_USERS.document(uid).collection("user-likes").document(post.postId).setData([:], completion: completion)
         }
     }
     
@@ -71,7 +72,8 @@ struct PostService {
         COLLECTION_POSTS.document(post.postId).updateData(["likes": post.likes - 1])
 
         COLLECTION_POSTS.document(post.postId).collection("post-likes").document(uid).delete { _ in
-            COLLECTION_POSTS.document(uid).collection("user-likes").document(post.postId).delete(completion: completion)
+            
+            COLLECTION_USERS.document(uid).collection("user-likes").document(post.postId).delete(completion: completion)
         }
     }
     
@@ -80,6 +82,7 @@ struct PostService {
 
         COLLECTION_USERS.document(uid).collection("user-likes").document(post.postId).getDocument { (snapshot, _) in
             guard let didLike = snapshot?.exists else { return }
+            print("(post.caption) : \(didLike)") 
             completion(didLike)
         }
     }
