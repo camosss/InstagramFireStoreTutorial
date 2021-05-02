@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B405FA66263E538500B70125 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B405FA65263E538500B70125 /* NotificationViewModel.swift */; };
 		B412CA4F263149A60000C1C5 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412CA4E263149A60000C1C5 /* UserCell.swift */; };
 		B412CA52263161130000C1C5 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412CA51263161130000C1C5 /* UserCellViewModel.swift */; };
 		B416EA34263841B600B43D6C /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416EA33263841B600B43D6C /* CommentController.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		0358A1B480BBAF30C25D0A92 /* Pods-InstagramFireStoreTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramFireStoreTutorial.release.xcconfig"; path = "Target Support Files/Pods-InstagramFireStoreTutorial/Pods-InstagramFireStoreTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		B405FA65263E538500B70125 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		B412CA4E263149A60000C1C5 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B412CA51263161130000C1C5 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		B416EA33263841B600B43D6C /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				B412CA51263161130000C1C5 /* UserCellViewModel.swift */,
 				B4DDF7AE2636B8D0000C49D2 /* PostViewModel.swift */,
 				B42C602D2638FE5600C318DF /* CommentViewModel.swift */,
+				B405FA65263E538500B70125 /* NotificationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42C602E2638FE5600C318DF /* CommentViewModel.swift in Sources */,
+				B405FA66263E538500B70125 /* NotificationViewModel.swift in Sources */,
 				B4DDF7AF2636B8D0000C49D2 /* PostViewModel.swift in Sources */,
 				B42D47C9262EB1AE003DBB57 /* AuthenticationViewModel.swift in Sources */,
 				B42C355A262FD259008E8959 /* ProfileHeader.swift in Sources */,
