@@ -52,7 +52,12 @@ class FeedController: UICollectionViewController {
         // post가 nil이면 밑의 코드는 작동 x
         guard post == nil else { return }
         
-        PostService.fetchPosts { posts in
+//        PostService.fetchPosts { posts in
+//            self.posts = posts
+//            self.checkIfUserLikePosts()
+//            self.collectionView.refreshControl?.endRefreshing()
+        
+        PostService.fetchFeedPost { posts in
             self.posts = posts
             self.checkIfUserLikePosts()
             self.collectionView.refreshControl?.endRefreshing()
