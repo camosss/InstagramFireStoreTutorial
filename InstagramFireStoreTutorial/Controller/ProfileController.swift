@@ -137,29 +137,33 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 // MARK: - ProfileHeaderDelegate
 
 extension ProfileController: ProfileHeaderDelegate {
-func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
+    func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
     
-    guard let tab = tabBarController as? MainTabController else { return }
-    guard let currentUser = tab.user else { return }
-    
-    if user.isCurrentUser {
-        print("DEBUG: Show edit profile here...")
-    } else if user.isFollowed {
-        // print("DEBUG: Handle unfollow user here...")
-        UserService.unfollow(uid: user.uid) { error in
-            self.user.isFollowed = false
-            self.collectionView.reloadData()
-        }
-    } else {
-        UserService.follow(uid: user.uid) { error in
-           // print("DEBUG: Did follw user. Update UI now...")
-            self.user.isFollowed = true
-            self.collectionView.reloadData()
+        guard let tab = tabBarController as? MainTabController else { return }
+        guard let currentUser = tab.user else { return }
             
-            NotificationService.uploadNotification(toUid: user.uid,
-                                                   fromUser: currentUser,
-                                                   type: .follow)
+        if user.isCurrentUser {
+            print("DEBUG: Show edit profile here...")
+        } else if user.isFollowed {
+            // print("DEBUG: Handle unfollow user here...")
+            UserService.unfollow(uid: user.uid) { error in
+                self.user.isFollowed = false
+                self.collectionView.reloadData()
+                
+                PostService.updateUserFeedAfterFollowing(user: user, didFollow: false)
+            }
+        } else {
+            UserService.follow(uid: user.uid) { error in
+                // print("DEBUG: Did follw user. Update UI now...")
+                self.user.isFollowed = true
+                self.collectionView.reloadData()
+                
+                NotificationService.uploadNotification(toUid: user.uid,
+                                                       fromUser: currentUser,
+                                                       type: .follow)
+            
+                PostService.updateUserFeedAfterFollowing(user: user, didFollow: true)
+            }
         }
     }
-}
 }
