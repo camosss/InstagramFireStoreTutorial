@@ -106,6 +106,14 @@ struct PostService {
             snapshot?.documents.forEach({ document in
                 fetchPost(withPostId: document.documentID) { post in
                     posts.append(post)
+                    
+                    // (수정) profile에 올라온 순서에 맞게 정렬
+                    //  posts.sort { (post1, post2) -> Bool in
+                    //  return post1.timestamp.seconds > post2.timestamp.seconds
+                    //  }
+                    // 위의 코드 간결화
+                    posts.sort(by: { $0.timestamp.seconds > $1.timestamp.seconds })
+                    
                     completion(posts)
                 }
             })
