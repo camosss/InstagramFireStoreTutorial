@@ -112,7 +112,7 @@ extension ProfileController {
     }
 }
 
-    // MARK: - UICollectionViewDataSource
+    // MARK: - UICollectionViewDelegateFlowLayout
 // to determine all the sizing for the collection of stuff
 
 extension ProfileController: UICollectionViewDelegateFlowLayout {
@@ -134,7 +134,7 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-// MARK: - ProfileHeaderDelegate
+    // MARK: - ProfileHeaderDelegate
 
 extension ProfileController: ProfileHeaderDelegate {
     func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
