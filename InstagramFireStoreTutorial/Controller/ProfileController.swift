@@ -100,7 +100,7 @@ extension ProfileController {
     }
 }
 
-    // MARK: - UICollectionViewDataSource
+    // MARK: - UICollectionViewDelegate
 // selecting items that in the collection view
 
 extension ProfileController {
